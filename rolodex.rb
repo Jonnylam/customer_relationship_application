@@ -6,11 +6,13 @@ class Rolodex
 	end
 
 	def add_contact(contact)
-		contact.id = @@ids
-		@contacts << contact
-		@@ids += 1
+		contact.id = @@ids #assign an ID number
+		@contacts << contact #adds in an array
+		@@ids += 1 #adds a new unique ID number
 		contact
 	end
+
+
 
 	def searchcontact(info)
 		contacts.each do |x|
@@ -21,9 +23,9 @@ class Rolodex
 			
 			end
 		end
-		
+		#goes through each element in the array and searches for firstname, if found then displays subsequent info.  
 	end
-#If there is no contact, runs an empty method
+	#If there is no contact, runs an empty method - fix later
 
 	def attribute_id(attribute)
 		@contacts.each do |contact|
@@ -39,13 +41,14 @@ class Rolodex
 				puts "your input is not an attribute"
 			end
 		end
+		#Using each method, searches contacts array, if user inputs an attribute, display a specific attribute by pulling info from the array and putting it
 	end
 
-	#find which contact to delete and modify
+
 	def find_contact(idnumber)
 		@contacts.find { |contact| contact.id = idnumber}
+		#method to search an the contact array by ID number, need it to delete a contact and modify a contact
 	end
-
 
 	def delete_id(deleteid)
 		deleted_id = find_contact(deleteid)
@@ -59,13 +62,15 @@ class Rolodex
 			# else
 			# 	"contact does not exist"
 			# end
+		#Couldnt get the if statement to work, but .delete method deletes the contact
 	end
 
 	def modify_contact(idnumber)
-		modify_id = find_contact(idnumber)
-				puts "Please enter the Name: "
+		modify_id = find_contact(idnumber) #searches array for ID number
+				
+				puts "Please enter the Name: " 
 				name = gets.chomp 
-				contact = @contacts.find(idnumber).first
+				contact = @contacts.find(idnumber).first 
 				contact.firstname = name
 
 				puts "Please enter the lastname: "
@@ -82,5 +87,23 @@ class Rolodex
 				note = gets.chomp
 				contact = @contacts.find(idnumber).first
 				contact.note = note
+	 #first method finds first element of the array, ID number, which then changes everything after
 	end
 end
+
+
+
+#Modify_contact
+#Take ID number
+#Is this the right number?
+#No - Reinput Number
+# #		puts "[1] Change name:"
+# 		puts "[2] Change lastname:"
+# 		puts "[3] Change email:"
+# 		puts "[4] Change notes"
+#enter a new value for an attribute
+#
+
+#Displayone
+#/find contact first
+#if you find the contact, display it
