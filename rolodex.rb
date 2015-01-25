@@ -23,4 +23,23 @@ class Rolodex
 		end
 		
 	end
+#If there is no contact, runs an empty method
+
+	def attribute_id(attribute)
+		@contacts.each do |contact|
+			if attribute == "first"
+				puts contact.firstname
+			elsif attribute == "last"
+				puts contact.lastname
+			elsif attribute == "email"
+				puts contact.email
+			elsif attribute == "note"
+				puts contact.note
+			else
+				puts "your input is not an attribute"
+			end
+		end
+	end
+
+
 end

@@ -83,6 +83,13 @@ class CRM
 		
 	end
 
+	def display_attribute
+		puts "Enter an attribute to display: first, last, email, or note"
+		attribute = gets.chomp
+		@rolodex.attribute_id(attribute)
+
+	end
+
 end
 
 
