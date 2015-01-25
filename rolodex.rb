@@ -11,4 +11,16 @@ class Rolodex
 		@@ids += 1
 		contact
 	end
+
+	def searchcontact(info)
+		contacts.each do |x|
+			if x.firstname == info
+				puts "FIRST NAME: #{x.firstname}, LAST NAME: #{x.lastname}, EMAIL: #{x.email}, NOTE: #{x.note}"
+			else
+				puts "there is no contact"
+			
+			end
+		end
+		
+	end
 end

@@ -75,7 +75,14 @@ class CRM
 			puts "id: #{x.id}, FIRST NAME: #{x.firstname}, LAST NAME: #{x.lastname}, EMAIL: #{x.email}, NOTE: #{x.note}"
 		end
 	end
+
+	def display_contact
+		print "Who are you looking for? Please input a firstnamename: "
+		find_contact = gets.chomp
+		find = @rolodex.searchcontact(find_contact)
 		
+	end
+
 end
 
 
