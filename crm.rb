@@ -69,6 +69,12 @@ class CRM
 			@rolodex.add_contact(new_contact)
 		end
 
+
+	def display_contacts
+		@rolodex.contacts.each do |x|
+			puts "id: #{x.id}, FIRST NAME: #{x.firstname}, LAST NAME: #{x.lastname}, EMAIL: #{x.email}, NOTE: #{x.note}"
+		end
+	end
 		
 end
 
