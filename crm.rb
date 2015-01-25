@@ -90,6 +90,13 @@ class CRM
 
 	end
 
+	
+	def delete_contact
+		puts "Enter ID that you want to delete"
+		deleteuserid = gets.chomp.to_i
+		@rolodex.delete_id(deleteuserid)
+	end
+
 end
 
 

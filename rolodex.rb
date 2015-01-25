@@ -41,5 +41,17 @@ class Rolodex
 		end
 	end
 
-
+	def delete_id(deleteid)
+		deleted_id = find_contact(deleteid)
+			# if deleted_id == deleteid
+			if @contacts.delete(deleted_id)
+				puts "contact deleted"
+			else
+				puts "no contact"
+			end
+			# 	puts "deleted"
+			# else
+			# 	"contact does not exist"
+			# end
+	end
 end
