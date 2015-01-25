@@ -41,6 +41,12 @@ class Rolodex
 		end
 	end
 
+	#find which contact to delete and modify
+	def find_contact(idnumber)
+		@contacts.find { |contact| contact.id = idnumber}
+	end
+
+
 	def delete_id(deleteid)
 		deleted_id = find_contact(deleteid)
 			# if deleted_id == deleteid
