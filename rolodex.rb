@@ -60,4 +60,27 @@ class Rolodex
 			# 	"contact does not exist"
 			# end
 	end
+
+	def modify_contact(idnumber)
+		modify_id = find_contact(idnumber)
+				puts "Please enter the Name: "
+				name = gets.chomp 
+				contact = @contacts.find(idnumber).first
+				contact.firstname = name
+
+				puts "Please enter the lastname: "
+				lastname = gets.chomp
+				contact = @contacts.find(idnumber).first
+				contact.lastname = lastname
+
+				puts "Please enter the email:"
+				email = gets.chomp
+				contact = @contacts.find(idnumber).first
+				contact.email = email
+
+				puts "Please enter the notes:"
+				note = gets.chomp
+				contact = @contacts.find(idnumber).first
+				contact.note = note
+	end
 end

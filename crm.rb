@@ -90,13 +90,19 @@ class CRM
 
 	end
 
-	
+
 	def delete_contact
 		puts "Enter ID that you want to delete"
 		deleteuserid = gets.chomp.to_i
 		@rolodex.delete_id(deleteuserid)
 	end
 
+	def modify_contact
+		puts "Enter ID you want to modify"
+		modifyid = gets.chomp.to_i
+		# @rolodex.find_contact(modifyid)
+		@rolodex.modify_contact(modifyid)
+	end
 end
 
 
